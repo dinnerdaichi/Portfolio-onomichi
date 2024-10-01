@@ -117,6 +117,10 @@
     font-weight: 700;
     line-height: 160%;
     margin-top: 24px;
+
+    @include m.mq(sp){
+       font-size: 16px;
+    }
   }
 
   &__content-text {
@@ -134,6 +138,11 @@
     line-height: 160%;
     /* 25.6px */
     text-align: left;
+
+    @include m.mq(sp){
+       font-size: 12px;
+    margin: 16px auto 0;
+    }
 
   }
 
@@ -184,6 +193,10 @@
     line-height: 160%;
     margin-bottom: 24px;
     /* 25.6px */
+
+    @include m.mq(sp){
+       font-size: 12px;
+    }
   }
 
 }

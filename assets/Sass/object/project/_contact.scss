@@ -24,6 +24,10 @@
     font-size: 16px;
     font-weight: 400;
     margin-bottom: 40px;
+
+    @include m.mq(sp){
+       font-size: 12px;
+    }
   }
 
   &__form-group {
@@ -58,6 +62,8 @@
 
       @include m.mq(sp){
          text-align: left;
+         font-weight: bold;
+         font-size: 14px;
       }
     }
 
@@ -73,6 +79,10 @@
         background: var(--LP-Red, #CE2073);
         padding: 8px;
         margin-left: 12px;
+
+        @include m.mq(sp){
+           padding: 3px;
+        }
     }
   }
 
@@ -143,6 +153,10 @@
 
     label{
       margin-bottom: 0;
+
+      @include m.mq(sp){
+         font-size: 14px;
+      }
     }
 
 

@@ -433,6 +433,12 @@ h2, h3 {
   z-index: 3;
   opacity: 1;
 }
+@media screen and (max-width:767px) {
+  .to-top.show {
+    width: 75px;
+    height: 75px;
+  }
+}
 
 /*--------------------------------------*
     * layout
@@ -553,6 +559,11 @@ h2, h3 {
   font-style: normal;
   font-weight: 400;
   line-height: 160%;
+}
+@media screen and (max-width:767px) {
+  .footer-copy {
+    font-size: 10px;
+  }
 }
 
 /* ---------------------------------------------------
@@ -692,6 +703,11 @@ h2, h3 {
   margin-top: 24px;
   padding: 24px;
 }
+@media screen and (max-width:767px) {
+  .accordion-header {
+    padding: 20px 40px 20px 10px;
+  }
+}
 
 .accordion-header.active {
   border-bottom: none;
@@ -738,11 +754,18 @@ h2, h3 {
   padding-left: 25px;
   position: relative;
 }
+@media screen and (max-width:767px) {
+  .accordion-header span,
+  .accordion-content span {
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
 
 .accordion-header span::before {
   position: absolute;
   content: "Q";
-  top: 2px;
+  top: -3px;
   left: 0;
   color: #151E2F;
   font-size: 17px;
@@ -934,6 +957,8 @@ input[type=submit]:hover {
   margin: 0 auto;
   text-align: center;
   padding: 10px 10px 6px;
+  position: relative;
+  z-index: 1;
 }
 @media screen and (max-width:767px) {
   .c-section__title {
@@ -942,6 +967,10 @@ input[type=submit]:hover {
 }
 
 .c-section.mv {
+  padding-top: 0;
+}
+
+.c-section.about {
   padding-top: 0;
 }
 
@@ -991,6 +1020,11 @@ input[type=submit]:hover {
   border-radius: 50%;
   position: absolute;
 }
+@media screen and (max-width:767px) {
+  .swiper-button-next.spot-next {
+    display: none;
+  }
+}
 
 .swiper-button-prev.spot-prev {
   top: 88%;
@@ -1001,6 +1035,23 @@ input[type=submit]:hover {
   border-radius: 50%;
   position: absolute;
 }
+@media screen and (max-width:767px) {
+  .swiper-button-prev.spot-prev {
+    display: none;
+  }
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  position: absolute;
+  left: 30px;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  position: absolute;
+  left: 25px;
+}
 
 /* ---------------------------------------------------
  * トップ
@@ -1009,6 +1060,11 @@ input[type=submit]:hover {
   background-color: #E9F6F8;
   position: relative;
   height: 900px;
+}
+@media screen and (max-width:767px) {
+  .mv {
+    height: 760px;
+  }
 }
 .mv__back-ground {
   height: 740px;
@@ -1019,6 +1075,11 @@ input[type=submit]:hover {
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
+}
+@media screen and (max-width:767px) {
+  .mv__back-ground {
+    width: 100%;
+  }
 }
 .mv__inner {
   max-width: 848px;
@@ -1042,6 +1103,11 @@ input[type=submit]:hover {
   line-height: 125%;
   text-shadow: 0px 0px 30px #FFF;
 }
+@media screen and (max-width:767px) {
+  .mv__inner-description {
+    font-size: 14px;
+  }
+}
 .mv__inner-title {
   margin-top: 24px;
 }
@@ -1049,10 +1115,25 @@ input[type=submit]:hover {
   margin: 0 auto;
   display: block;
 }
+@media screen and (max-width:767px) {
+  .mv__inner-title-img {
+    width: 100%;
+    max-width: 335px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: block;
+  }
+}
 .mv__decoration-wrap {
   width: 100%;
   height: 560px;
   position: relative;
+}
+@media screen and (max-width:767px) {
+  .mv__decoration-wrap {
+    max-width: 375px;
+    margin: 0 auto;
+  }
 }
 .mv__smart-phone {
   position: absolute;
@@ -1060,6 +1141,13 @@ input[type=submit]:hover {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+@media screen and (max-width:767px) {
+  .mv__smart-phone {
+    top: 25%;
+    width: 100%;
+    max-width: 192px;
+  }
 }
 .mv__right {
   display: -webkit-inline-box;
@@ -1081,6 +1169,14 @@ input[type=submit]:hover {
   top: 0;
   z-index: -1;
 }
+@media screen and (max-width:767px) {
+  .mv__right {
+    width: 110px;
+    height: 110px;
+    left: 55%;
+    top: 3%;
+  }
+}
 .mv__left {
   position: absolute;
   left: 5%;
@@ -1089,6 +1185,14 @@ input[type=submit]:hover {
   width: 240px;
   height: 125.969px;
 }
+@media screen and (max-width:767px) {
+  .mv__left {
+    width: 140px;
+    height: 77px;
+    left: 12%;
+    top: 6%;
+  }
+}
 .mv__cats {
   position: absolute;
   width: 233px;
@@ -1096,12 +1200,26 @@ input[type=submit]:hover {
   top: 55%;
   left: 75%;
 }
+@media screen and (max-width:767px) {
+  .mv__cats {
+    top: 75%;
+    width: 120px;
+  }
+}
 .mv__sweets {
   position: absolute;
   width: 202px;
   height: 332px;
   top: 40%;
   left: 3%;
+}
+@media screen and (max-width:767px) {
+  .mv__sweets {
+    width: 86px;
+    height: 141px;
+    top: 73%;
+    left: 8%;
+  }
 }
 
 .p-about {
@@ -1125,7 +1243,7 @@ input[type=submit]:hover {
 }
 @media screen and (max-width:767px) {
   .p-about__contents {
-    padding: 40px 40px;
+    padding: 40px 30px;
   }
 }
 .p-about__contents::after {
@@ -1155,6 +1273,7 @@ input[type=submit]:hover {
 @media screen and (max-width:767px) {
   .p-about__sub-head {
     width: 100%;
+    font-size: 14px;
   }
 }
 .p-about__text-wrap {
@@ -1187,6 +1306,11 @@ input[type=submit]:hover {
   font-style: normal;
   font-weight: 700;
   line-height: 160%;
+}
+@media screen and (max-width:767px) {
+  .p-about__bottom-text {
+    font-size: 14px;
+  }
 }
 .p-about__top-img-left {
   position: absolute;
@@ -1268,11 +1392,24 @@ input[type=submit]:hover {
 .p-about__swiper-wrap {
   margin-top: 167px;
 }
+@media screen and (max-width:767px) {
+  .p-about__swiper-wrap {
+    margin-top: 96px;
+  }
+}
 .p-about__swiper-bg {
   width: 890.604px;
   height: 97px;
   display: block;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+@media screen and (max-width:767px) {
+  .p-about__swiper-bg {
+    width: 100%;
+    height: 0;
+  }
 }
 
 .p-how-to-entry__contents-wrap {
@@ -1318,12 +1455,22 @@ input[type=submit]:hover {
   display: block;
   margin: 0 auto;
 }
+@media screen and (max-width:767px) {
+  .p-how-to-entry__item-img {
+    max-width: 196px;
+  }
+}
 .p-how-to-entry__item-head {
   font-family: "Noto Sans JP";
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: 160%;
+}
+@media screen and (max-width:767px) {
+  .p-how-to-entry__item-head {
+    font-size: 16px;
+  }
 }
 .p-how-to-entry__item-text {
   color: var(--LP-Blown, #4A3636);
@@ -1335,6 +1482,11 @@ input[type=submit]:hover {
 }
 .p-how-to-entry__item-text span {
   font-weight: bold;
+}
+@media screen and (max-width:767px) {
+  .p-how-to-entry__item-text {
+    font-size: 12px;
+  }
 }
 
 .p-how-to-entry__map {
@@ -1386,6 +1538,11 @@ input[type=submit]:hover {
 .p-prize__contents li {
   border-radius: 24px;
 }
+@media screen and (max-width:767px) {
+  .p-prize__contents li {
+    border-radius: 10px;
+  }
+}
 .p-prize__head-text {
   color: var(--LP-Blown, #4A3636);
   font-family: "Noto Sans JP";
@@ -1394,6 +1551,11 @@ input[type=submit]:hover {
   font-weight: 400;
   line-height: 160%;
   text-align: center;
+}
+@media screen and (max-width:767px) {
+  .p-prize__head-text {
+    font-size: 12px;
+  }
 }
 .p-prize__item-flex {
   display: -webkit-box;
@@ -1434,6 +1596,12 @@ input[type=submit]:hover {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
+@media screen and (max-width:767px) {
+  .p-prize__item-icon {
+    width: 56px;
+    height: 56px;
+  }
+}
 .p-prize__item-icon-small {
   position: absolute;
   width: 80px;
@@ -1460,6 +1628,11 @@ input[type=submit]:hover {
 .p-prize__item-title {
   padding: 44px 20px;
 }
+@media screen and (max-width:767px) {
+  .p-prize__item-title {
+    padding: 24px 20px;
+  }
+}
 .p-prize__item-title.small {
   padding: 27px 0;
 }
@@ -1470,9 +1643,20 @@ input[type=submit]:hover {
   bottom: 0px;
   right: 0px;
 }
+@media screen and (max-width:767px) {
+  .p-prize__item-triangle {
+    width: 36px;
+    height: 36px;
+  }
+}
 .p-prize__item-triangle img {
   width: 100%;
   border-radius: 0 0 24px 0;
+}
+@media screen and (max-width:767px) {
+  .p-prize__item-triangle img {
+    border-radius: 0 0 10px 0;
+  }
 }
 .p-prize__item-triangle::after {
   content: "";
@@ -1483,6 +1667,12 @@ input[type=submit]:hover {
   height: 32px;
   bottom: 10%;
 }
+@media screen and (max-width:767px) {
+  .p-prize__item-triangle::after {
+    width: 12px;
+    height: 12px;
+  }
+}
 .p-prize__item-triangle.small {
   position: absolute;
   width: 64px;
@@ -1490,9 +1680,20 @@ input[type=submit]:hover {
   bottom: 0px;
   right: 0px;
 }
+@media screen and (max-width:767px) {
+  .p-prize__item-triangle.small {
+    width: 36px;
+    height: 36px;
+  }
+}
 .p-prize__item-triangle.small img {
   width: 100%;
   border-radius: 0 0 24px 0;
+}
+@media screen and (max-width:767px) {
+  .p-prize__item-triangle.small img {
+    border-radius: 0 0 10px 0;
+  }
 }
 .p-prize__item-triangle.small::after {
   content: "";
@@ -1502,6 +1703,12 @@ input[type=submit]:hover {
   width: 20px;
   height: 20px;
   bottom: 10%;
+}
+@media screen and (max-width:767px) {
+  .p-prize__item-triangle.small::after {
+    width: 12px;
+    height: 12px;
+  }
 }
 .p-prize__background img {
   -o-object-fit: cover;
@@ -1663,6 +1870,11 @@ input[type=submit]:hover {
   line-height: 160%;
   margin-top: 24px;
 }
+@media screen and (max-width:767px) {
+  .p-spot__content-title {
+    font-size: 16px;
+  }
+}
 .p-spot__content-text {
   font-size: 16px;
   font-weight: 400;
@@ -1676,6 +1888,12 @@ input[type=submit]:hover {
   line-height: 160%;
   /* 25.6px */
   text-align: left;
+}
+@media screen and (max-width:767px) {
+  .p-spot__content-text {
+    font-size: 12px;
+    margin: 16px auto 0;
+  }
 }
 .p-spot__bottom-content {
   margin-top: 40px;
@@ -1729,6 +1947,11 @@ input[type=submit]:hover {
   line-height: 160%;
   margin-bottom: 24px;
   /* 25.6px */
+}
+@media screen and (max-width:767px) {
+  .p-spot__bottom-text {
+    font-size: 12px;
+  }
 }
 
 .p-faq__acodion-wrap {
@@ -1791,6 +2014,7 @@ input[type=submit]:hover {
 @media screen and (max-width:767px) {
   .p-entry-info__table th {
     width: 100%;
+    font-size: 14px;
   }
 }
 .p-entry-info__table td {
@@ -1807,6 +2031,7 @@ input[type=submit]:hover {
   .p-entry-info__table td {
     width: 100%;
     margin-top: 16px;
+    font-size: 12px;
   }
 }
 .p-entry-info__bg {
@@ -1845,6 +2070,11 @@ input[type=submit]:hover {
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 40px;
+}
+@media screen and (max-width:767px) {
+  .p-contact__content-head {
+    font-size: 12px;
+  }
 }
 .p-contact__form-group {
   display: -webkit-box;
@@ -1885,6 +2115,8 @@ input[type=submit]:hover {
 @media screen and (max-width:767px) {
   .p-contact__form-label label {
     text-align: left;
+    font-weight: bold;
+    font-size: 14px;
   }
 }
 .p-contact__form-label span {
@@ -1898,6 +2130,11 @@ input[type=submit]:hover {
   background: var(--LP-Red, #CE2073);
   padding: 8px;
   margin-left: 12px;
+}
+@media screen and (max-width:767px) {
+  .p-contact__form-label span {
+    padding: 3px;
+  }
 }
 .p-contact__form-input {
   width: 70%;
@@ -1978,6 +2215,11 @@ input[type=submit]:hover {
 .p-contact__form-privacy label {
   margin-bottom: 0;
 }
+@media screen and (max-width:767px) {
+  .p-contact__form-privacy label {
+    font-size: 14px;
+  }
+}
 .p-contact__form-button {
   width: 100%;
   max-width: 240px;
@@ -2022,7 +2264,6 @@ input[type=submit]:hover {
 }
 .p-map__content {
   position: relative;
-  margin-top: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2040,18 +2281,18 @@ input[type=submit]:hover {
   }
 }
 .p-map__bg {
-  position: absolute;
   width: 755px;
-  height: 125px;
-  top: -16px;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  margin: 40px auto 0;
 }
 .p-map__bg img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+}
+@media screen and (max-width:767px) {
+  .p-map__bg {
+    width: 100%;
+  }
 }
 .p-map__content-left {
   width: 50%;
@@ -2070,6 +2311,11 @@ input[type=submit]:hover {
 .p-map__info-head {
   text-align: left;
   width: 180px;
+}
+@media screen and (max-width:767px) {
+  .p-map__info-head {
+    margin: 0 auto;
+  }
 }
 .p-map__info-list {
   margin-top: 24px;
@@ -2098,6 +2344,11 @@ input[type=submit]:hover {
   line-height: normal;
   padding-left: 15px;
 }
+@media screen and (max-width:767px) {
+  .p-map__info-title {
+    font-size: 12px;
+  }
+}
 .p-map__info-title::before {
   position: absolute;
   content: "";
@@ -2114,6 +2365,11 @@ input[type=submit]:hover {
   font-weight: 400;
   line-height: 160%;
   color: var(--LP-Blown, #4A3636);
+}
+@media screen and (max-width:767px) {
+  .p-map__info-text {
+    font-size: 12px;
+  }
 }
 .p-map__content-right {
   width: 50%;

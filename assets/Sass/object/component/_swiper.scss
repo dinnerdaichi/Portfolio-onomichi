@@ -28,6 +28,10 @@
   background-color: v.$color-accent_yellow;
   border-radius: 50%;
 position: absolute;
+
+@include m.mq(sp){
+   display: none;
+}
 }
 
 .swiper-button-prev.spot-prev{
@@ -38,6 +42,23 @@ position: absolute;
   background-color: v.$color-accent_yellow;
   border-radius: 50%;
   position: absolute;
+
+  @include m.mq(sp) {
+      display: none;
+    }
+}
+
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after{
+  position: absolute;
+  left: 30px;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after{
+position: absolute;
+  left: 25px;
 }
 
 

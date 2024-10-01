@@ -20,6 +20,10 @@
   margin-top: 24px;
   padding: 24px;
 
+  @include m.mq(sp){
+     padding: 20px 40px 20px 10px;
+  }
+
 
 }
 
@@ -65,12 +69,17 @@
 .accordion-content span {
   padding-left: 25px;
   position: relative;
+
+  @include m.mq(sp){
+     font-size: 14px;
+     font-weight: bold;
+  }
 }
 
 .accordion-header span::before {
   position: absolute;
   content: "Q";
-  top: 2px;
+  top: -3px;
   left: 0;
   color: #151E2F;
   font-size: 17px;

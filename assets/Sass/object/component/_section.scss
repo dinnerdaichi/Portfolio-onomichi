@@ -50,7 +50,9 @@
   margin: 0 auto;
   text-align: center;
   padding: 10px 10px 6px;
-  
+  position: relative;
+  z-index: 1;
+
 
   @include m.mq(sp){
      font-size: 20px;
@@ -60,6 +62,10 @@
 }
 
 .c-section.mv{
+  padding-top: 0;
+}
+
+.c-section.about{
   padding-top: 0;
 }
 
