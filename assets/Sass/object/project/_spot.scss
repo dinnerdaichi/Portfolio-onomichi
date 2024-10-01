@@ -1,0 +1,189 @@
+@use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
+
+
+.p-spot {
+
+  position: relative;
+  background-color: v.$bg-dark-blue;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url(../img/spot-bg-wave.png);
+    background-size: contain;
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 120px;
+    top: -120px;
+
+    @include m.mq(sp){
+       height: 60px;
+       top: -60px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url(../img/spot-bg-wave.png);
+    background-size: contain;
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 120px;
+    bottom: -120px;
+    transform: rotateX(180deg);
+
+    @include m.mq(sp) {
+        height: 60px;
+        bottom: -60px;
+      }
+  }
+
+  &__head {
+
+    margin-right: 40px;
+
+    @include m.mq(sp){
+       width: 100%;
+       margin-bottom: 24px;
+    }
+
+    h2 {
+      color: white;
+      width: 40px;
+      font-family: "Kiwi Maru";
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 125%;
+      font-feature-settings: 'pwid';
+      color: white;
+      padding-top: 80px;
+
+      @include m.mq(sp){
+         width: 100%;
+         text-align: center;
+         font-size: 28px;
+      }
+    }
+  }
+
+  &__swiper-wrap {
+    display: flex;
+    justify-content: space-between;
+  padding-left: max(30px, 50% - 512px);
+
+  @include m.mq(sp){
+     flex-direction: column;
+     padding-left: 0;
+  }
+  }
+
+
+  &__swiper {
+
+    display: flex;
+    overflow: hidden;
+    // padding-bottom: 40px;
+    border-radius: 24px;
+    background: var(--LP-White, #FFF);
+    flex-direction: column;
+    align-items: center;
+    // gap: 24px;
+    height: 542px;
+
+    img {
+      width: 100%;
+      height: 240px;
+      border-radius: 24px 24px 0 0;
+      object-fit: cover;
+
+    }
+  }
+
+  &__content {
+    text-align: center;
+    background-color: white;
+    border-radius: 0 0 24px 24px;
+    padding: 0 32px 20px;
+  }
+
+  &__content-title {
+
+    color: var(--LP-Blown, #4A3636);
+    font-family: "Noto Sans JP";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%;
+    margin-top: 24px;
+  }
+
+  &__content-text {
+    // width: 280px;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 24px auto 0;
+    color: var(--LP-Blown, #4A3636);
+
+    /* JP/Text 16px Regular */
+    font-family: "Noto Sans JP";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    /* 25.6px */
+    text-align: left;
+
+  }
+
+  &__bottom-content {
+    margin-top: 40px;
+    padding-bottom: 10px;
+  }
+
+  &__bottom-flex {
+    display: flex;
+    justify-content: space-between;
+
+    @include m.mq(sp){
+       flex-direction: column;
+    }
+  }
+
+  &__bottom-img {
+    width: 50%;
+    height: 107px;
+    margin-right: 80px;
+
+    @include m.mq(sp){
+       width: 100%;
+       max-width: 255px;
+       margin: 0 auto;
+    }
+  }
+
+  &__bottom-button {
+    width: 50%;
+    text-align: center;
+
+    @include m.mq(sp){
+       width: 100%;
+    }
+  }
+
+  &__bottom-text {
+    color: var(--LP-White, #FFF);
+    text-align: center;
+
+    /* JP/Text 16px Regular */
+    font-family: "Noto Sans JP";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    margin-bottom: 24px;
+    /* 25.6px */
+  }
+
+}

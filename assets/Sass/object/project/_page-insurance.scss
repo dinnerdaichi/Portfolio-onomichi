@@ -1,0 +1,159 @@
+@use "../../foundation/mixin" as m;
+
+
+.p-insurance__mv-wrap.inner {
+  background-color: #e1f8f5;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  padding: 100px 100px;
+
+  @include m.mq(sp) {
+
+    padding: 20px;
+  }
+}
+
+.p-insurance {
+
+  // margin-top: 100px;
+
+  &__content {
+    text-align: left;
+    max-width: 1160px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__text {
+    font-size: 2em;
+
+    @include m.mq(sp) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__sub-text {
+    font-size: 1.5em;
+    margin-top: 50px;
+
+    @include m.mq(sp) {
+      font-size: 1.2rem;
+    }
+  }
+
+}
+
+
+.p-insurance__point {
+  background-color: #fff;
+  margin-top: 200px;
+
+  @include m.mq(sp) {
+    margin-top: 50px;
+  }
+}
+
+// パートナー
+
+.p-insurance__patner {
+
+  background-color: #faf5e1;
+  margin-top: 100px;
+  // margin-bottom: 300px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @include m.mq(sp) {
+    margin-top: 50px;
+  }
+
+  &-content {
+    // border-bottom: 1px solid #000;
+    // padding: 100px 0;
+    text-align: center;
+    position: relative;
+    // margin-top: 50px;
+
+    @include m.mq(sp) {
+      padding: 0;
+    }
+
+
+
+    h3 {
+      background-color: white;
+      padding: 10px;
+      text-align: center;
+      width: 40%;
+      border-radius: 50px;
+      margin: 0 auto;
+      border: 1px solid black;
+
+      @include m.mq(sp){
+         width: 100%;
+
+      }
+
+    }
+  }
+
+  &-text {
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 2.5em;
+
+  }
+
+
+  &-logo {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+
+    @include m.mq(sp){
+       display: block;
+    }
+  }
+
+  &-img {
+    width: 25%;
+
+    @include m.mq(sp){
+       width: 90%;
+       margin:  0 auto 20px;
+       display: block;
+    }
+  }
+}
+
+
+.p-insurance__policy {
+padding-top: 50px;
+padding-bottom: 50px;
+  // margin-top: 50px;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  text-align: center;
+  margin-top: 50px;
+
+  h3{
+    background-color: white;
+      padding: 10px;
+      text-align: center;
+      width: 40%;
+      border-radius: 50px;
+      margin: 0 auto;
+      border: 1px solid black;
+
+      @include m.mq(sp){
+         width: 100%;
+         margin-bottom: 30px;
+      }
+  }
+
+
+  &-text{
+    margin-top: 20px;
+  }
+}

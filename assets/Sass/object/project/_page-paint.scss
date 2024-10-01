@@ -1,0 +1,190 @@
+@use "./../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
+
+.p-paint__point{
+  margin-top: 100px;
+}
+
+
+
+
+
+// example
+.p-paint {
+
+  &__example {
+    background-color: #faf5e1;
+    margin-top: 150px;
+    padding: 100px 0;
+
+    @include m.mq(sp){
+       margin-top: 80px;
+       padding: 50px 0;
+    }
+
+    &-head {
+      display: flex;
+      justify-content: space-between;
+
+      @include m.mq(sp){
+         display: block;
+      }
+    }
+
+    &-img {
+      width: 50%;
+      margin-right: 30px;
+
+      @include m.mq(sp){
+         width: 100%;
+      }
+    }
+
+    &-title_wrap {
+      width: 50%;
+
+      @include m.mq(sp){
+         width: 100%;
+         margin-top: 20px;
+      }
+    }
+
+    &-title {
+      font-size: 2.2rem;
+
+    }
+
+    &-text {
+      font-size: 1rem;
+
+      @include m.mq(sp){
+         margin-top: 10px;
+      }
+
+    }
+
+    &-info {
+      margin-top: 10px;
+      padding: 12px;
+      background-color: #caecfc;
+      border-radius: 30px;
+
+      @include m.mq(sp){
+         padding: 30px;
+         margin-top: 10px;
+      }
+    }
+  }
+
+}
+
+// 修理事例
+.p-paint__example {
+
+  &-content {
+    margin-top: 100px;
+
+    h4{
+
+      margin: 0 auto;
+
+      @include m.mq(sp){
+
+      }
+    }
+
+    @include m.mq(sp){
+       margin-top: 50px;
+    }
+  }
+
+  &-list_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 330px;
+    padding: 50px 0;
+
+    @include m.mq(sp){
+       display: block;
+       height: auto;
+    }
+
+  }
+
+  &-list_img {
+    width: 30%;
+    height: 100%;
+    border-radius: 10px;
+
+    @include m.mq(sp){
+       width: 100%;
+    }
+
+  }
+
+  &-triangle {
+    width: 5%;
+    text-align: center;
+
+    @include m.mq(sp){
+       width: 100%;
+    }
+  }
+
+  &-column {
+    width: 30%;
+    background-color: #fff;
+    height: 100%;
+    border-radius: 10px;
+
+    @include m.mq(sp){
+       width: 100%;
+       margin-top: 16px;
+    }
+
+    &_text {
+      display: flex;
+      justify-content: flex-start;
+      height: calc(100% / 3);
+
+      @include m.mq(sp){
+         padding: 20px;
+      }
+
+      &:nth-child(2){
+border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
+      }
+
+      p {
+
+        // background-color: gray;
+        text-align: left;
+        width: 45%;
+        height: 100%;
+        align-items: center;
+        display: flex;
+        padding-left: 20px;
+
+
+        &:first-child {
+          // text-align: left;
+        }
+
+        &:nth-child(2) {
+          width: 10%;
+          text-align: center;
+
+
+        }
+
+
+      }
+    }
+  }
+
+
+
+
+}

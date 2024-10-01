@@ -1,0 +1,128 @@
+@use "../../foundation/mixin" as m;
+
+.p-wagashi__mv-wrap.inner {
+  background-color: #e1f8f5;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  padding: 100px 100px;
+}
+
+.p-wagashi {
+
+  // margin-top: 100px;
+
+  &__content {
+    text-align: left;
+    max-width: 1160px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__text {
+    font-size: 2rem;
+  }
+
+  &__sub-text {
+    font-size: 1.5rem;
+    margin-top: 50px;
+  }
+
+  &__item-wrap {
+    padding-top: 100px;
+  }
+
+  &__title-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title-line {
+    background-color: gray;
+    height: 2px;
+    width: 40%;
+  }
+
+  &__item {
+    margin-top: 50px;
+
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 20px
+    }
+
+    &-list {
+      border-bottom: 1px solid #67dbce;
+      text-align: center;
+      padding-bottom: 25px;
+      height: 300px;
+
+      p {
+        margin-top: 25px;
+      }
+    }
+  }
+
+  &__item-img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+          box-shadow: 1px 1px 5px gray;
+  }
+
+  &__info {
+
+    margin-top: 100px;
+    padding-bottom: 300px;
+
+    &-link {
+      background-color: #faf5e1;
+      display: flex;
+      justify-content: center;
+    }
+
+    &-logo{
+      font-size: 2rem;
+    }
+
+    &-text{
+      font-size: 1.5rem;
+    }
+
+  }
+
+  &__info-more{
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  &__info-left{
+    width: 50%;
+    margin-right: 5px;
+  }
+
+  &__info-right{
+    width: 50%;
+  }
+
+  &__info-img_wrap{
+    display: flex;
+    justify-content: space-between;
+
+    &:last-child{
+      margin-top: 5px;
+    }
+
+    img{
+      width: 50%;
+
+      &:first-child{
+        margin-right: 5px;
+      }
+    }
+  }
+
+}

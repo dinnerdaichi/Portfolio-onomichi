@@ -1,0 +1,217 @@
+@use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
+
+
+.p-prize{
+
+&__contents-wrap{
+  margin-top: 40px;
+  background-color: white;
+  padding: 56px;
+  border-radius: 24px;
+
+  @include m.mq(sp){
+    padding: 56px 20px;
+  }
+}
+
+&__contents{
+  margin-top: 82px;
+  position: relative;
+
+  li{
+    border-radius: 24px;
+  }
+}
+
+&__head-text{
+
+  color: var(--LP-Blown, #4A3636);
+  font-family: "Noto Sans JP";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  text-align: center;
+}
+
+&__item-flex{
+  display: flex;
+  justify-content: space-between;
+
+  li{
+    background-color: #F5F5F5;
+
+    &:nth-child(3){
+
+      @include m.mq(sp){
+         margin-top: 50px;
+      }
+    }
+  }
+
+  @include m.mq(sp){
+     flex-wrap: wrap;
+  }
+
+
+}
+
+&__item-top{
+  li{
+    width: 440px;
+    position: relative;
+
+    @include m.mq(sp){
+       width: 48%;
+    }
+  }
+}
+
+&__item-icon{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+&__item-icon-small{
+  position: absolute;
+  width: 80px;
+  height: 80px;
+
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+&__item-bottom{
+
+  margin-top: 80px;
+
+  li{
+    width: 30%;
+    position: relative;
+
+    @include m.mq(sp){
+       width: 48%;
+    }
+  }
+}
+
+&__item-img{
+ img{
+  border-radius: 24px 24px 0 0 ;
+ }
+}
+
+&__item-title{
+  padding: 44px 20px;
+}
+&__item-title.small{
+  padding: 27px 0;
+}
+
+
+
+&__item-triangle{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  bottom: 0px;
+  right: 0px;
+
+  img{
+    width: 100%;
+    border-radius: 0 0 24px 0;
+  }
+
+  &::after{
+    content: "";
+    position: absolute;
+    background-image: url(../img/prizes-zoom-icon.png);
+    background-size: cover;
+    width: 32px;
+    height: 32px;
+    bottom: 10%;
+  }
+
+
+}
+
+&__item-triangle.small{
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  bottom: 0px;
+  right: 0px;
+
+  img{
+    width: 100%;
+    border-radius: 0 0 24px 0;
+  }
+
+     &::after {
+       content: "";
+       position: absolute;
+       background-image: url(../img/prizes-zoom-icon.png);
+       background-size: cover;
+       width: 20px;
+       height: 20px;
+       bottom: 10%;
+     }
+
+}
+
+
+&__background{
+
+  img{
+    object-fit: cover;
+    width: 100%;
+
+  }
+}
+
+// モーダル
+&__modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background-color: #808080c4;
+  width: 100vh;
+  height: 100vh;
+  border-radius: 50px;
+
+  img{
+    width: 100%;
+  }
+
+}
+
+&__modal.show{
+  z-index: 10;
+}
+
+&__modal-content{
+  border-radius: 50px;
+  z-index: 11;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+
+
+
+}
+
+.p-prize__item-title.modal{
+  text-align: left;
+}

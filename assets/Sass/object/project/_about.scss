@@ -1,0 +1,213 @@
+@use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
+
+
+.p-about {
+  background-color: v.$bg-light-blue;
+  position: relative;
+  overflow: hidden;
+
+  &__inner{
+
+    @include m.mq(sp){
+       padding: 0 20px;
+    }
+  }
+
+  &__contents {
+    background-color: white;
+    border-radius: 50px;
+    max-width: 848px;
+    margin: 0 auto;
+    position: relative;
+    padding: 40px 114px;
+    text-align: center;
+
+    @include m.mq(sp){
+       padding: 40px 40px;
+    }
+
+
+    &::after {
+        content: '';
+        background-image: url(../img/about-triangle-icon.png);
+
+        width: 140px;
+        height: 50px;
+        position: relative;
+        bottom: -75px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+  }
+
+
+
+  &__sub-head{
+
+    width: 620px;
+    color: var(--LP-Blown, #4A3636);
+    font-family: "Noto Sans JP";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%;
+    font-feature-settings: 'pref' on;
+    margin-top: 32px;
+
+    @include m.mq(sp){
+       width: 100%;
+    }
+  }
+
+  &__text-wrap{
+    margin-top: 32px;
+  }
+
+  &__text{
+margin-top: 32px;
+    color: var(--LP-Blown, #4A3636);
+      text-align: center;
+      font-family: "Noto Sans JP";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%;
+
+      span{
+        font-weight: bold;
+      }
+
+      @include m.mq(sp){
+         font-size: 12px;
+      }
+
+  }
+
+  &__bottom-text{
+
+    color: var(--LP-Blown, #4A3636);
+      text-align: center;
+margin-top: 44px;
+      font-family: "Noto Sans JP";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 160%;
+  }
+
+  &__top-img-left{
+    position: absolute;
+    width: 134px;
+    height: 100px;
+    transform: rotate(-8deg);
+    flex-shrink: 0;
+    left: 10%;
+  }
+
+  &__top-img-right{
+    position: absolute;
+    width: 134px;
+    height: 100px;
+    transform: rotate(8deg);
+    flex-shrink: 0;
+    left: 75%;
+
+    @include m.mq(sp){
+       left: 64%;
+    }
+  }
+
+
+
+
+}
+
+// 背景画像
+
+.p-about{
+
+  &__decoration-img-left01{
+    position: absolute;
+    top: -5%;
+
+    width: 250px;
+    height: 250px;
+    border-radius: 24px;
+
+    flex-shrink: 0;
+    right: calc(50% + 527px);
+  }
+
+  &__decoration-img-left02{
+    position: absolute;
+    top: 10%;
+
+   width: 480px;
+   height: 480px;
+   border-radius: 40px;
+    right: calc(50% + 630px);
+  }
+
+  &__decoration-img-left03{
+    position: absolute;
+    top: 30%;
+
+   width: 480px;
+   height: 480px;
+   border-radius: 40px;
+    right: calc(50% + 400px);
+  }
+
+  &__decoration-img-left05{
+    position: absolute;
+    top: 10%;
+
+   width: 480px;
+   height: 480px;
+   border-radius: 40px;
+    left: calc(50% + 540px);
+  }
+
+  &__decoration-img-left06{
+    position: absolute;
+    top: 70%;
+
+   width: 100px;
+   height: 100px;
+   border-radius: 40px;
+    left: calc(50% + 490px);
+  }
+
+  &__decoration-img-left07{
+    position: absolute;
+    top: 90%;
+
+   width: 308px;
+   height: 150px;
+   border-radius: 40px;
+    left: calc(50% + 370px);
+  }
+
+
+}
+
+// swiper
+
+.p-about{
+
+  &__swiper-wrap{
+
+    margin-top:167px ;
+  }
+
+  &__swiper-bg{
+
+    width: 890.604px;
+    height: 97px;
+    display: block;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,91 @@
+@use "../../foundation/mixin" as m;
+@use "../../foundation/variable" as v;
+
+
+
+
+
+.c-section {
+  padding-top: 120px;
+
+  background-color: v.$bg-light-blue;
+  text-align: center;
+  overflow: hidden;
+
+  @include m.mq(sp){
+     padding-top: 40px;
+  }
+
+  &__head{
+    position: relative;
+  }
+
+
+  &__icon{
+    margin: 0 auto;
+    width: 48px;
+    height: 48px;
+  }
+&__sub-title{
+
+  color: var(--LP-Blown, #4A3636);
+  font-family: Courgette;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  text-align: center;
+  margin: 8px auto 0 ;
+
+}
+
+&__title{
+  display: inline;
+  font-family: "Kiwi Maru";
+  font-size: 32px;
+  font-weight: 500;
+  font-feature-settings: 'pwid' on;
+  border-bottom: 8px solid var(--LP-Yellow, #FFEE56);
+  width: 320px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px 10px 6px;
+  
+
+  @include m.mq(sp){
+     font-size: 20px;
+  }
+}
+
+}
+
+.c-section.mv{
+  padding-top: 0;
+}
+
+
+.about__section-head{
+  margin-top: 96px;
+}
+
+.section__how-to-entry{
+
+
+}
+
+.section__faq{
+  padding-top: 240px;
+
+  @include m.mq(sp){
+     padding-top: 140px;
+  }
+}
+
+.section__contact{
+  background-color: white;
+}
+
+.section__map{
+  background-color: v.$bg-light-blue;
+  padding-bottom: 240px;
+}

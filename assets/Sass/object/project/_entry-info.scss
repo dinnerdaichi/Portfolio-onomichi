@@ -1,0 +1,96 @@
+@use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
+
+.p-entry-info{
+
+
+  &__content{
+    background: rgba(255, 255, 255, 0.50);
+    border: 8px solid var(--LP-White, #FFF);
+    padding: 40px 56px;
+
+    @include m.mq(sp){
+       padding: 24px 20px;
+    }
+  }
+
+  &__table{
+
+    margin-top: 40px;
+
+
+    tr{
+      display: flex;
+      justify-content: space-between;
+      padding: 12px;
+      border-bottom: 1px solid var(--LP-Dark-Gray, #CCC);
+
+      &:last-child{
+        border-bottom: none;
+      }
+
+      @include m.mq(sp){
+         flex-direction: column;
+      }
+    }
+
+    th{
+      width: 30%;
+      text-align: left;
+      color: var(--LP-Blown, #4A3636);
+      font-weight: 700;
+      position: relative;
+      padding-left: 15px;
+
+      &::before{
+        position: absolute;
+        content: "";
+        width: 8px;
+          height: 8px;
+          background-color: v.$bg-dark-blue;
+          border-radius: 50%;
+          display: block;
+          top: 8px;
+          left: 0;
+      }
+
+      @include m.mq(sp){
+         width: 100%;
+      }
+    }
+
+    td{
+      text-align: left;
+      width: 70%;
+      font-family: "Noto Sans JP";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+        /* 25.6px */
+
+        @include m.mq(sp){
+           width: 100%;
+           margin-top: 16px;
+        }
+    }
+
+  }
+
+  &__bg{
+    height: 400px;
+    margin-top: 120px;
+
+    img{
+      object-fit: cover;
+    }
+
+    @include m.mq(sp){
+       height: 100px;
+       margin-top: 32px;
+    }
+  }
+
+
+
+}

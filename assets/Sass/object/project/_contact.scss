@@ -1,0 +1,168 @@
+@use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
+
+.p-contact {
+
+  background-color: white;
+
+  &__content {
+
+    margin-top: 32px;
+
+    form {
+      margin: 0;
+      width: 100%;
+      max-width: 100%;
+
+      @include m.mq(sp){
+         padding: 0;
+      }
+    }
+  }
+  &__content-head{
+    color: var(--LP-Blown, #4A3636);
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
+
+  &__form-group {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 24px;
+
+ @include m.mq(sp){
+    flex-direction: column;
+ }
+
+  }
+
+  &__form-group.button {
+ display: block;
+
+  }
+
+  &__form-label {
+    width: 30%;
+
+    @include m.mq(sp){
+       width: 100%;
+    }
+
+    label{
+      text-align: right;
+      margin-bottom: 0;
+      margin-right: 20px;
+
+
+      @include m.mq(sp){
+         text-align: left;
+      }
+    }
+
+    span{
+
+      color: var(--LP-White, #FFF);
+      font-family: "Noto Sans JP";
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 160%;
+      border-radius: 4px;
+        background: var(--LP-Red, #CE2073);
+        padding: 8px;
+        margin-left: 12px;
+    }
+  }
+
+  &__form-input {
+    width: 70%;
+
+    @include m.mq(sp){
+       width: 100%;
+       margin-top: 12px;
+    }
+
+    input{
+      padding: 16px;
+      background: var(--LP-Gray, #F5F5F5);
+      border: none;
+      margin-bottom: 0;
+    }
+
+    select{
+      padding: 16px;
+      background: var(--LP-Gray, #F5F5F5);
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    button{
+      border-radius: 40px;
+        border: 2px solid var(--LP-Blown, #4A3636);
+        background: var(--LP-White, #FFF);
+        box-shadow: 0px 4px 0px 0px #4A3636;
+        display: flex;
+          width: 100%;
+          max-width: 240px;
+          height: 40px;
+          padding: 6px 24px 8px 24px;
+          justify-content: center;
+          align-items: center;
+          margin: 0 auto;
+    }
+  }
+
+  &__form-input.radio{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    input{
+      margin-right: 5px;
+    }
+
+         label {
+           margin-right: 10px;
+           margin-bottom: 0;
+         }
+  }
+
+
+  &__form-privacy{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input{
+      margin-right: 5px;
+    }
+
+    label{
+      margin-bottom: 0;
+    }
+
+
+  }
+
+  &__form-button{
+    width: 100%;
+    max-width: 240px;
+    border-radius: 40px;
+      border: 2px solid var(--LP-Blown, #4A3636);
+      background: var(--LP-White, #FFF);
+      box-shadow: 0px 4px 0px 0px #4A3636;
+      margin: 40px auto 0;
+      padding: 6px 24px 8px 24px;
+
+      @include m.mq(sp){
+         max-width: none;
+      padding: 10px 24px 10px 24px;
+      }
+  }
+
+
+}

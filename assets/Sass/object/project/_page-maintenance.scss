@@ -1,0 +1,510 @@
+@use "../../foundation/mixin" as m;
+@use "./../../foundation/variable" as v;
+
+
+.p-mentenance__point {
+
+  margin-top: 100px;
+}
+
+.p-mentenance__price {
+  background-color: v.$bg-beige;
+  padding: 100px 0;
+  margin-top: 100px;
+
+}
+
+.p-mentenance__table {
+
+  table {
+    width: 100%;
+
+    th {
+      font-size: 1.2em;
+    }
+
+    tr {
+      background-color: #66dbcd;
+      font-weight: bold;
+      height: 100px;
+
+      td {
+        font-size: 1.6em;
+        font-weight: bold;
+        width: 20%;
+        // padding: 20px;
+
+        &:not(:first-child) {
+          width: 12%;
+          text-align: center;
+        }
+
+        &:first-child {
+          // width: 20px;
+          padding-left: 10px;
+          background-color: #9dc0ea;
+        }
+
+        &:nth-child(2n) {
+          background-color: #4cc1f4;
+
+
+        }
+      }
+
+      &:nth-child(2n) {
+
+        background-color: #e1f8f5;
+
+        td {
+
+
+
+          // &:first-child{
+          //   background-color: #9dc0ea;
+          // }
+
+          &:nth-child(2n) {
+            background-color: #dbf3fd;
+
+
+          }
+        }
+      }
+
+    }
+
+  }
+
+}
+
+.p-mentenence__benefit {
+
+  max-width: 1200px;
+  margin: 100px auto 0;
+
+  &-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ee7aab;
+  }
+
+  &-title {
+    width: 30%;
+    height: 100%;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    margin-left: 20px;
+
+  }
+
+  &-content {
+    width: 70%;
+    background: #fbe4ee;
+  }
+
+  &-list {
+    padding: 10px 10px 50px;
+
+    ul {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &-item {
+    margin-right: 30px;
+    width: 33%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+
+  &-item_title {
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 21px;
+    position: relative;
+    z-index: 111;
+    bottom: -30px;
+    box-shadow: 2px 2px 2px gray;
+    font-weight: bold;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+
+    &::before {
+      content: '車検満了日';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      translate: -50%;
+      font-size: 15px;
+    }
+
+    &::after {
+      content: 'までの車検のご予約で';
+      position: absolute;
+      bottom: 3px;
+      left: 50%;
+      translate: -50%;
+      font-size: 12px;
+      width: 100%;
+    }
+  }
+
+
+  &-item_text {
+    max-width: 100%;
+    padding-top: 100%;
+    background: #ee7aab;
+    border-radius: 9999px;
+    // padding-top: 50px;
+    text-align: center;
+    color: white;
+    border: 1px solid #fff;
+    position: relative;
+    border-radius: 10px;
+
+    p {
+      position: absolute;
+      font-size: 20px;
+      top: 20%;
+      left: 27%;
+
+      &:last-child {
+        top: 60%;
+        left: 20%;
+        border-radius: 10px;
+      }
+
+      span {
+        font-weight: bold;
+        font-size: 1.5em;
+      }
+
+      &:last-child {
+        background-color: #fff;
+        color: #ee7aab;
+        font-size: 12px;
+        padding: 10px;
+        width: 60%;
+        margin: 0px auto 0;
+      }
+
+    }
+
+  }
+}
+
+
+/* ---------------------------------------------------
+ * check
+/* ---------------------------------------------------*/
+
+
+
+.p-check__point {
+  margin-top: 150px;
+
+  @include m.mq(sp) {
+    margin-top: 50px;
+  }
+}
+
+
+.p-check__reason {
+  text-align: center;
+
+  h3 {
+    font-size: 2em;
+    padding: 20px 90px;
+    border: solid #505050;
+    display: inline-block;
+    border-radius: 30px;
+
+    @include m.mq(sp) {
+      font-size: 1.8rem;
+      padding: 20px 20px;
+      width: 100%;
+      border-radius: 50px;
+    }
+
+  }
+
+  margin-top: 150px;
+
+  &-list {
+
+    margin-top: 50px;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      max-height: 300px;
+
+
+      @include m.mq(sp) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+  }
+
+  &-item {
+    position: relative;
+    width: 18%;
+    padding-top: 18%;
+    text-align: center;
+    font-weight: bold;
+    background-color: #67dbce;
+    border-radius: 50%;
+    font-weight: bold;
+
+    @include m.mq(sp) {
+      width: 45%;
+      padding-top: 45%;
+      justify-content: center;
+      margin-top: 15px;
+
+      &:nth-child(2n) {
+        margin-left: 10px;
+      }
+
+    }
+
+    &:nth-child(2n) {
+
+      background-color: #4dc1f4;
+    }
+
+
+  }
+
+  &-num {
+    font-size: 12px;
+
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-style: oblique;
+
+    span {
+      display: block;
+      font-size: 20px;
+    }
+  }
+
+  &-title {
+    position: absolute;
+    font-size: 18px;
+    margin-top: 5px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+  }
+}
+
+
+/* ---------------------------------------------------
+ * 点検料金
+/* ---------------------------------------------------*/
+
+.p-check__price {
+  background-color: v.$bg-beige;
+  padding: 80px 0;
+  margin-top: 200px;
+
+  @include m.mq(sp) {
+    margin-top: 320px;
+  }
+
+  &-flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    @include m.mq(sp) {
+      display: block;
+    }
+
+    h3 {
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 50px;
+      text-align: center;
+      margin-right: 20px;
+      border: 1px solid gray;
+
+      @include m.mq(sp) {
+        margin-right: 0;
+        width: 100%;
+      }
+    }
+
+    @include m.mq(sp) {
+      p {
+        margin-top: 30px;
+      }
+    }
+
+  }
+
+
+  &-table {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 100%;
+
+    table {
+      width: 100%;
+      font-weight: bold;
+
+      th {
+        font-size: 22px;
+        background-color: #71cdf6;
+
+        @include m.mq(sp) {
+          font-size: 10px;
+        }
+
+        &:nth-child(2n) {
+          background-color: #67dbce;
+        }
+
+        &:first-child {
+          opacity: 0;
+        }
+
+      }
+
+
+      td {
+        font-size: 22px;
+        text-align: center;
+        width: 25%;
+        background-color: #dcf2fd;
+
+
+        &:nth-child(2n) {
+          background-color: #e2f8f5;
+        }
+
+        &:first-child {
+          text-align: left;
+          padding-left: 20px;
+        }
+
+        @include m.mq(sp) {
+          font-size: 16px;
+        }
+      }
+
+
+    }
+  }
+
+
+
+}
+
+
+/* ---------------------------------------------------
+ * 一般整備
+/* ---------------------------------------------------*/
+
+.p-general {
+
+  @include m.mq(sp) {
+    margin-top: 0;
+  }
+}
+
+.p-general__point {
+
+  margin-top: 150px;
+
+  @include m.mq(sp) {
+    margin-top: 30px;
+  }
+}
+
+.p-general {
+
+  &__example {
+    background-color: #faf5e1;
+    margin-top: 150px;
+    padding: 100px 0;
+    // margin-bottom: 300px;
+
+    @include m.mq(sp) {
+      margin-top: 50px;
+    padding: 20px 0;
+    }
+
+    img {
+      border-radius: 30px;
+    }
+
+    &-head {
+      display: flex;
+      justify-content: space-between;
+
+      @include m.mq(sp) {
+        display: block;
+      }
+    }
+
+    &-img {
+      width: 50%;
+      margin-right: 30px;
+
+      @include m.mq(sp) {
+        width: 100%;
+      }
+    }
+
+    &-title_wrap {
+      width: 50%;
+
+      @include m.mq(sp) {
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
+
+    &-title {
+      font-size: 2.2rem;
+
+
+      @include m.mq(sp) {
+        font-size: 2.2rem;
+      }
+    }
+
+    &-text {
+      font-size: 1em;
+      margin-top: 30px;
+      font-weight: bold;
+
+    }
+
+    &-info {
+      margin-top: 10px;
+      padding: 12px;
+      background-color: #caecfc;
+      border-radius: 30px;
+    }
+  }
+
+}

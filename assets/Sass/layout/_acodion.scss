@@ -1,0 +1,92 @@
+@use "../foundation/variable" as v;
+@use "../foundation/mixin" as m;
+
+/* 必須 */
+.accordion-content {
+  display: none;
+}
+
+
+
+.accordion-header {
+  background-color: #FFF;
+  padding: 12px 45px 10px 20px;
+  margin: 10px 0 0;
+  transition: background .3s ease;
+  cursor: pointer;
+  position: relative;
+  border-radius: 16px;
+  // border: 2px solid var(--LP-Blown, #4A3636);
+  margin-top: 24px;
+  padding: 24px;
+
+
+}
+
+.accordion-header.active{
+  border-bottom: none;
+  border-radius: 16px 16px 0 0;
+
+}
+
+.accordion-header::before,
+.accordion-header::after {
+  position: absolute;
+  content: '';
+  top: 1px;
+  right: 20px;
+  bottom: 0;
+  width: 12px;
+  height: 2px;
+  margin: auto;
+  background: #151E2F;
+}
+
+.accordion-header::after {
+  transform: rotate(-90deg);
+  transition: transform 0.3s;
+}
+
+.accordion-header.active::after {
+  transform: rotate(0deg);
+}
+
+.accordion-content {
+  background-color: #FFF;
+  padding: 12px 20px 10px;
+  border-radius:0 0 14px 14px;
+  // border: 2px solid var(--LP-Blown, #4A3636);
+  border-top: none;
+  padding: 24px;
+
+}
+
+.accordion-header span,
+.accordion-content span {
+  padding-left: 25px;
+  position: relative;
+}
+
+.accordion-header span::before {
+  position: absolute;
+  content: "Q";
+  top: 2px;
+  left: 0;
+  color: #151E2F;
+  font-size: 17px;
+}
+
+
+.accordion-content span::before {
+  position: absolute;
+  content: "A";
+  top: 3px;
+  left: 0;
+  color: #151E2F;
+  font-size: 17px;
+}
+
+/* hover */
+.accordion-header:hover {
+  background-color: #F2F2F2;
+}

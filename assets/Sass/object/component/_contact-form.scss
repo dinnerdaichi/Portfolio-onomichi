@@ -1,0 +1,79 @@
+@use "../../foundation/mixin" as m;
+@use "../../foundation/variable" as v;
+
+/* h1見出しのスタイル */
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+/* フォーム全体のスタイル */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+}
+
+/* ラベルのスタイル */
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* 入力フィールドとテキストエリアのスタイル */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: v.$color-base;
+}
+
+/* 送信ボタンのスタイル */
+input[type="submit"] {
+  background-color:v.$color-base;
+  color: gray;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* 送信ボタンのマウスオーバー時のスタイル */
+input[type="submit"]:hover {
+  opacity: 0.8;
+}
+
+
+
+@include m.mq(sp){
+    /* h1見出しのフォントサイズを調整 */
+      h1 {
+        font-size: 20px;
+      }
+
+      /* フォームの幅を調整 */
+      form {
+        max-width: 100%;
+      }
+
+      /* 入力フィールドとテキストエリアのフォントサイズを調整 */
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        font-size: 14px;
+      }
+
+      /* 送信ボタンのフォントサイズを調整 */
+      input[type="submit"] {
+        font-size: 14px;
+      }
+}
